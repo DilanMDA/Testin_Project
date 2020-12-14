@@ -1,10 +1,11 @@
-//  create first component 
+//  create first component that's called STATELESS FUNCTIONAL COMPONENT
 // start the make component normally we need to import react and javascript function
 // index.js is javascript entry point and we need to add additional code.
 import React from 'react';
 // if create function we initialize this function starting the capitalize letter in this case react knows  this is the function.
 import ReactDom from 'react-dom';
 // we return to JSX and we must convert that HTML so we import ReactDom and its render JSX into HTML  
+// Allays return JSX
 function Greeting(){
 return <h4>This is Akila and Tis is my first component</h4>
 }
