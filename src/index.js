@@ -7,19 +7,19 @@ import ReactDom from 'react-dom';
 // we return to JSX and we must convert that HTML so we import ReactDom and its render JSX into HTML  
 // Allays return JSX
 
-// function Greeting(){
-// return (
-//     <di>
-//          <h1>This is Akila and Tis is my first component</h1>
-//     </di>
-// )
-// }
+function Greeting(){
+return (
+    <div>
+         <h1>This is function convert to arrow function</h1>
+    </div>
+)
+}
 // stateless arrow functional component
-const Greeting = () =>{
-    return React.createElement(
-        'div',
-    {},
-    React.createElement('h1',{}, 'hello world'));
-} 
+// const Greeting = () =>{
+//     return React.createElement(
+//         'div',
+//     {},
+//     React.createElement('h1',{}, 'hello world'));
+// } 
 // render method looking for two thing first one is what is going to render and second thing is where we want to render which is identify root id 
 ReactDom.render(<Greeting/>, document.getElementById('root'));
