@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-//  Nested Component, React Tools
+//   CSS added
+import './index.css';
 function BookList() {
 	return (
-		<section>
+		<section className = 'booklists'>
 			 <Book/>
 			 <Book/>
 			 <Book/>
@@ -12,13 +13,13 @@ function BookList() {
 			 <Book/>
 			 <Book/>
 			 <Book/>
-			 
+			 <Book/>
 		</section>
 	);
 }
 const Book = () => {
 	return (
-		<article>
+		<article className = 'book'>
 			{/* created separate components and they are added notedly */}
 			<Image/>
 			<Title/>
@@ -27,7 +28,7 @@ const Book = () => {
 	)
 }
 const Image = () => {
-	return <img src="https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._AC_SX184_.jpg" alt="Amzon Book"/>
+	return <img src="https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._AC_SX184_.jpg" alt="Amazon Book"/>
 }
 const Title = () => <h1>I Love You to the Moon and Back</h1>
 const Author = () => <h4>Amelia Hepworth, Tim Warnes</h4>
