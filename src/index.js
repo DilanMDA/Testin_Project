@@ -1,41 +1,38 @@
+// React JSX
 import React from 'react';
 import ReactDom from 'react-dom';
-//   CSS added
 import './index.css';
+//   we don't have to hard code everything we can access JavaScript in JSX 
+// JSx access via an object so we achieve to in a curly braces 
 function BookList() {
 	return (
-		<section className = 'booklists'>
-			 <Book/>
-			 <Book/>
-			 <Book/>
-			 <Book/>
-			 <Book/>
-			 <Book/>
-			 <Book/>
-			 <Book/>
-			 <Book/>
+		<section className='booklists'>
+			<Book />
+
 		</section>
 	);
 }
+const author = 'Amelia Hepworth, Tim Warnes'
 const Book = () => {
+	const title = 'I Love You to the Moon and Back'
 	return (
-		<article className = 'book'>
-			{/* created separate components and they are added notedly */}
-			<Image/>
-			<Title/>
-			<Author/>
+		<article className='book'>
+			<img src="https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._AC_SX184_.jpg" alt="Amazon Book" />
+			<h1>{title}</h1>
+			<h4>{author}</h4>
+			{/* <p>{let x = 6}</p> */}
+			<p>{6+6}</p>
 		</article>
 	)
 }
-const Image = () => {
-	return <img src="https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._AC_SX184_.jpg" alt="Amazon Book"/>
-}
-const Title = () => <h1>I Love You to the Moon and Back</h1>
-
-// All the styles in a page will "cascade" into a new "virtual" style sheet by the following rules, where number one has the highest priority:
-// Inline style (inside an HTML element)
-// External and internal style sheets (in the head section)
-// Browser default
-// So, an inline style has the highest priority, and will override external and internal styles and browser defaults.
-const Author = () => <h4 style={{color: '#617d98',marginTop:'0.25rem'}}>Amelia Hepworth, Tim Warnes</h4>
 ReactDom.render(<BookList />, document.getElementById('root'));
+// As we have already seen that, all of the React components have a render function.
+//  The render function specifies the HTML output of a React component. JSX(JavaScript Extension), 
+//  is a React extension which allows writing JavaScript code that looks like HTML. In other words, 
+//  JSX is an HTML-like syntax used by React that extends ECMAScript so that HTML-like syntax can 
+//  co-exist with JavaScript/React code. The syntax is used by preprocessors (i.e., transpilers like babel)
+//  to transform HTML-like syntax into standard JavaScript objects that a JavaScript engine will parse.
+
+// JSX provides you to write HTML/XML-like structures (e.g., DOM-like tree structures) in the same file 
+// where you write JavaScript code, then preprocessor will transform these expressions into actual JavaScript code. 
+// Just like XML/HTML, JSX tags have a tag name, attributes, and children.
