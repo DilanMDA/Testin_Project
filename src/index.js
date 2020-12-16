@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import './index.css';
-// String Array list display via wrapping a map method
+// Object Array list display via wrapping a map method
 const Books  = [
 	{
 		img: 'https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._AC_SX184_.jpg',
@@ -12,23 +12,27 @@ const Books  = [
 	{
 		img: ' https://images-na.ssl-images-amazon.com/images/I/41tyokViuNL._AC_SX184_.jpg',
 		title: 'The Very Hungry Caterpillar',
+
 		author: 'Eric Carle',
 	}
 ];
-const names = ['akila','dilan', 'saman'];
-const newNames = names.map((name) =>{
-return <h1>{name}</h1>
-});
-console.log(newNames);
+// const names = ['akila','dilan', 'saman'];
+// const newNames = names.map((name) =>{
+// return <h1>{name}</h1>
+// });
+// console.log(newNames);
 function BookList() {
 	return (
 		<section className='booklists'>
-			 {newNames}
+			 {Books.map((book) => {
+				//  const {img, title, author} = book;
+return <Book book = {book}></Book>
+			 })}
 		</section>
 	);
 }
 const Book = (props) => {
-	const { img, title, author} = props
+	const { img, title, author} = props.book
 	return (
 		<article className='book'>
 			<img src={img} alt="Amazon Book" />
