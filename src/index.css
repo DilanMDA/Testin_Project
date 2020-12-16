@@ -21,13 +21,14 @@
      @media screen and (min-width: 768px) {
          .booklists {
              grid-template-columns: repeat(3, 1fr);
-             /* align items extend object 
-             align-items: start; */
+             /* align items extend object  */
+             align-items: start;
+             align-self: start;
          }
      }
      
      .book {
-         background: rgb(220, 228, 222);
+         background: rgb(227, 230, 227);
          border-radius: 1rem;
          padding: 1rem 2rem;
      }
@@ -37,7 +38,7 @@
      }
      
      .book h4 {
-         color: #ee10ab;
+         color: #818b11;
          font-size: 0.75rem;
          margin-top: 0.25rem;
      }
