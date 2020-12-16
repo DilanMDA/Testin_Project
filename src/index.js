@@ -31,9 +31,11 @@ const Books = [
 function BookList() {
 	return (
 		<section className='booklists'>
-			{Books.map((book) => {
+			{/* index is change as the array changing 
+			so better way to added via an id bcz that is the unique */}
+			{Books.map((book,index) => {
 				//  const {img, title, author} = book;
-				return <Book key = {book.id} book={book}></Book>
+				return <Book key = {index} book={book}></Book>
 			})}
 		</section>
 	);
