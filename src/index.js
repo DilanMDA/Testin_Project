@@ -35,20 +35,19 @@ function BookList() {
 			so better way to added via an id bcz that is the unique */}
 			{Books.map((book,index) => {
 				//  const {img, title, author} = book;
-				return <Book key = {index} book={book}></Book>
+				return <Book key = {index}  {...book}></Book>
+				// another way of passing props in this way ... means pass the all properties 
 			})}
 		</section>
 	);
 }
-const Book = (props) => {
-	const { img, title, author } = props.book
+const Book = ({img, title, author }) => {
+	// const { img, title, author } = props
 	return (
 		<article className='book'>
 			<img src={img} alt="Amazon Book" />
 			<h1>{title}</h1>
 			<h4>{author}</h4>
-			{props.children}
-
 		</article>
 	)
 }
