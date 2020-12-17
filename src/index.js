@@ -1,4 +1,4 @@
-// React props
+// React Events
 import React from 'react';
 import ReactDom from 'react-dom';
 import './index.css';
@@ -36,18 +36,28 @@ function BookList() {
 			{Books.map((book,index) => {
 				//  const {img, title, author} = book;
 				return <Book key = {index}  {...book}></Book>
-				// another way of passing props in this way ... means pass the all properties 
 			})}
 		</section>
 	);
 }
 const Book = ({img, title, author }) => {
-	// const { img, title, author } = props
-	return (
+ // attribute, eventHandler
+ // onClick, onHandler
+ const clickHandler = (e) => {
+console.log(e);
+console.log(e.target);
+	 alert('hello world');
+ };
+const complexExample = (author) => {
+console.log(author);
+}
+ return (
 		<article className='book'>
 			<img src={img} alt="Amazon Book" />
-			<h1>{title}</h1>
+			<h1 onClick = {() => console.log(title)}>{title}</h1>
 			<h4>{author}</h4>
+			<button type = 'button' onClick = {clickHandler}>reference example</button>
+			<button type = 'button' onClick={() => complexExample(author)}>more complex example</button>
 		</article>
 	)
 }
