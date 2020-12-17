@@ -52,7 +52,9 @@ const complexExample = (author) => {
 console.log(author);
 }
  return (
-		<article className='book'>
+		<article className='book' onMouseOver={()=>{
+			console.log(title);
+		}}>
 			<img src={img} alt="Amazon Book" />
 			<h1 onClick = {() => console.log(title)}>{title}</h1>
 			<h4>{author}</h4>
